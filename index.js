@@ -43,7 +43,7 @@ const{toss}=this.state
       <div className="container">
         <div className="card">
           <h1>Coin Toss Game</h1>
-          <p>Heads (or) Tails {toss}</p>
+          <p>Heads (or) Tails</p>
           <img src={imageUrl} alt="toss result" className="i" />
           <button type="button" onClick={this.tossBtn}>
             Toss Coin

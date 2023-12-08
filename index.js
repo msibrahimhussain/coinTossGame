@@ -16,28 +16,29 @@ class CoinToss extends Component {
     const n = parseInt(Math.random() * 10)
     if (n < 5) {
       this.setState({toss: 0})
-      } else {
+    } else {
       this.setState({toss: 1})
-      }
+    }
 
-const{toss}=this.state
-    
-    if(toss===0){
+    const {toss} = this.state
+
+    if (toss === 0) {
       this.setState(prevState => ({Total: prevState.Total + 1}))
       this.setState(prevState => ({Tails: prevState.Tails + 1}))
       this.setState({
         imageUrl: 'https://assets.ccbp.in/frontend/react-js/tails-img.png',
       })
-    }else{
+    } else {
       this.setState(prevState => ({Total: prevState.Total + 1}))
       this.setState(prevState => ({Heads: prevState.Heads + 1}))
       this.setState({
         imageUrl: 'https://assets.ccbp.in/frontend/react-js/heads-img.png',
       })
     }
+  }
 
   render() {
-    const {toss, Total, Heads, Tails, imageUrl} = this.state
+    const {Total, Heads, Tails, imageUrl} = this.state
 
     return (
       <div className="container">
